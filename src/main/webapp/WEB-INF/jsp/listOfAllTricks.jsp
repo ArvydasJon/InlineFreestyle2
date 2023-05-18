@@ -6,8 +6,9 @@
 <html>
     <head>
         <title>LIST OF ALL TRICKSss</title>
-        <jsp:include page="header.jsp"/>
         <jsp:include page="menu.jsp"/>
+        <jsp:include page="header.jsp"/>
+
         <style>
         .frozen-header {
             position: fixed;

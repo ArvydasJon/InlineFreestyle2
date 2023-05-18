@@ -3,7 +3,7 @@
 <footer class="page-footer font-small blue">
 
     <div class="navbar navbar-fixed-bottom text-center py-3">
-        <b>Internetinis skaičiuotuvas skirtas testavimui (c) 2021</b>
+        <b>SLALOM SLALOM SLALOM SLALOM SLALOM SLALOM (c) 2021</b>
     </div>
 
 </footer>

@@ -18,23 +18,19 @@
     <h1 class="text-center">Internetinis skaičiuotuvas</h1>
     <div class="container">
       <form method="POST" action="${contextPath}/prisijungti" class="form-signin">
-        <h3 class="form-heading">Prisijungimas</h3>
+        <h3 class="form-heading">Login</h3>
 
         <div class="form-group ${error != null ? 'has-error' : ''}">
             <span>${message}</span>
-            <input name="username" type="text" class="form-control" placeholder="Prisijungimo vardas"
+            <input name="username" type="text" class="form-control" placeholder="Name"
                    autofocus="true"/>
-            <input name="password" type="password" class="form-control" placeholder="Slaptažodis"/>
+            <input name="password" type="password" class="form-control" placeholder="Password"/>
             <span>${error}</span>
-            <!--
-                Web aplikacija naudotojui turėtų išduoti papildomą parametrą, kuris nebūtų nuspėjamas piktavaliui.
-                Paprastai naudotojui yrai išduodamas unikalus CSRF žetonas (token),
-                kuris turi būti validuojamas back-end’e su kiekviena duomenis keičiančia užklausa.
-            -->
+
             <input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}"/>
 
-            <button class="btn btn-lg btn-primary btn-block" type="submit">Prisijungti</button>
-            <h4 class="text-center"><a href="${contextPath}/registruoti">Sukurti naują paskyrą</a></h4>
+            <button class="btn btn-lg btn-primary btn-block" type="submit">LOGIN</button>
+            <h4 class="text-center"><a href="${contextPath}/registruoti">NEW ACCOUNT</a></h4>
         </div>
       </form>
     </div>

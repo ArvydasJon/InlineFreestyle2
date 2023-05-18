@@ -233,13 +233,13 @@ public class CalculatorController {
     @GetMapping("/prisijungti")
     public String login(Model model, String error, String logout) {
         if (error != null)
-            model.addAttribute("error", "Įvestas prisijungimo vardas ir/ arba slaptažodis yra neteisingi");
+            model.addAttribute("error", "The username or password is incorrect");
 
         if (logout != null)
-            model.addAttribute("message", "Sėkmingai atsijungėte");
+            model.addAttribute("message", "You have successfully logged out");
 
         return "prisijungti";
-     //  return "listOfAllTricks";
+
     }
 
     @GetMapping("/403")
