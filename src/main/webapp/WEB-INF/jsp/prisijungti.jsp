@@ -10,12 +10,12 @@
 
   <head>
       <meta charset="utf-8">
-      <title>Prisijungimas</title>
+      <title>LOGIN SLALOM</title>
           <jsp:include page="header.jsp"/>
   </head>
 
   <body>
-    <h1 class="text-center">Internetinis skaičiuotuvas</h1>
+    <h1 class="text-center">FREESTYLE SLALOM</h1>
     <div class="container">
       <form method="POST" action="${contextPath}/prisijungti" class="form-signin">
         <h3 class="form-heading">Login</h3>

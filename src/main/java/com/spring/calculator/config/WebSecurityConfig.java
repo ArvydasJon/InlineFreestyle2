@@ -30,7 +30,7 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
     protected void configure(HttpSecurity http) throws Exception {
         http
             .authorizeRequests()
-                .antMatchers("/skaiciai").hasAuthority("admin") // tik admin gali matyti visas atliktas skaičiavimo operacijas
+                .antMatchers("//addTrick").hasAuthority("admin") // tik admin gali matyti visas atliktas skaičiavimo operacijas
                 .antMatchers("/registruoti") // leidžiame registruotis neprisijungusiems vartotojams
                 //.antMatchers("/resources/**", "/skaiciai").hasRole("admin") // tik admin gali matyti visas atliktas skaičiavimo operacijas
                 //.antMatchers("/resources/**", "/registruoti") // leidžiame registruotis neprisijungusiems vartotojams

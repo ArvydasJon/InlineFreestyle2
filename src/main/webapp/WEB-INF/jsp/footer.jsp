@@ -1,10 +1,19 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
-<!-- Footer -->
-<footer class="page-footer font-small blue">
+<footer class="page-footer font-small blue fixed-bottom">
 
-    <div class="navbar navbar-fixed-bottom text-center py-3">
-        <b>SLALOM SLALOM SLALOM SLALOM SLALOM SLALOM (c) 2021</b>
+    <div class="footer">
+     <span id="slalom" style="color: blue;"></span>
     </div>
 
+    <script>
+        var slalomElement = document.getElementById("slalom");
+        var footerWidth = document.querySelector(".footer").offsetWidth;
+        var slalomText = "SLALOM";
+        var repetitions = Math.floor(footerWidth / (slalomText.length * 10)); // Adjust the factor 10 to your desired font size
+
+        for (var i = 1; i < repetitions; i++) {
+            slalomElement.innerHTML += slalomText + " ";
+        }
+    </script>
+
 </footer>
-<!-- Footer -->

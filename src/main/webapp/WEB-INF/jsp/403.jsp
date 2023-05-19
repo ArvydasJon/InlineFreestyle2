@@ -6,7 +6,7 @@
     <jsp:include page="menu.jsp"/>
 </head>
 <body class="container">
-<h4> Prieiga prie resursų draudžiama (403) </h4>
+<h4> Access forbidden (403) </h4>
 </body>
 <jsp:include page="footer.jsp"/>
 </html>

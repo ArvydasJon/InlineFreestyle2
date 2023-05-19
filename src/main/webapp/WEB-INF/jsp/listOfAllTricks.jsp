@@ -19,7 +19,6 @@
             z-index: 9999;
         }
 
-
                 body {
                   background-color: green;
                 }
@@ -77,11 +76,11 @@
                 <th>trick_level</th>
                 <th>trick_score</th>
                 <th>official_score</th>
-				<!--th>trick_name2</th-->
-				<th>video</th>
+            <!--th>trick_name2</th-->
+            <th>video</th>
             </tr>
-			
-			            <c:forEach var="element" items="${tricks2}">
+
+                     <c:forEach var="element" items="${tricks2}">
  <!-- konstruoja įrašo atnaujinimo adresą su skaičiaus id -->
                 <c:url var="atnaujinti" value="/update">
                     <c:param name="id" value="${element.id}"/>
@@ -102,22 +101,23 @@
                     <td>${element.trick_type}</td>
                     <td>${element.trick_level}</td>
                     <td>${element.trick_score}</td>
-					<td>${element.official_score}</td>
-					<!--td>${element.trick_name2}</td-->
-					<!--td>${element.link}</td-->
-					<td><a href="${element.link}"target="_blank">Open link</a></td>
+               <td>${element.official_score}</td>
+               <!--td>${element.trick_name2}</td-->
+               <!--td>${element.link}</td-->
+               <td><a href="${element.link}"target="_blank">Open link</a></td>
 
                     <td>
                         <!-- atvaizduoti atnaujinimo adresą -->
-						<a href="${atnaujinti}">Atnaujinti</a>
+                  <a href="${atnaujinti}">Atnaujinti</a>
                         | <a href="${trinti}"
                              onclick="if (!(confirm('Ar tikrai norite ištrinti šį įrašą?'))) return false">Trinti</a>
-                        | <!-- atvaizduoti rodymo adresą --> 
-						<a href="${rodyti}">Rodyti</a>
+                        | <!-- atvaizduoti rodymo adresą -->
+                  <a href="${rodyti}">Rodyti</a>
                     </td>
                 </tr>
             </c:forEach>
-			
+
         </div>
     </body>
 </html>
+

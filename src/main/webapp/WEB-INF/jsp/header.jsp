@@ -12,7 +12,7 @@
 
 
 
-<nav class="navbar navbar-light bg-light">
+<nav class="navbar navbar-light" style="background-color: #A5FFC9;">
   <div class="container-fluid">
     <div class="navbar-header">
     </div>
@@ -22,9 +22,9 @@
                 <button type="button" class="btn btn-primary ml-3">
                   <a href="/" style="color: white;">Go to trick list</a>
                 </button>
-        <button type="button" class="btn btn-primary ml-3">
+        <!--button type="button" class="btn btn-primary ml-3">
           <a href="/addTrick" style="color: white;">Add new trick</a>
-        </button>
+        </button-->
       </li>
     </ul>
   </div>

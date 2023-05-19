@@ -227,7 +227,7 @@ public class CalculatorController {
 
         securityService.autoLogin(userForm.getUsername(), userForm.getPasswordConfirm());
 
-        return "redirect:/skaiciuotuvas";
+        return "redirect:/";
     }
 
     @GetMapping("/prisijungti")

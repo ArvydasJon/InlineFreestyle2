@@ -3,16 +3,24 @@
 <html>
 <head>
     <title>ADD TRICK</title>
+    <jsp:include page="menu.jsp"/>
     <jsp:include page="header.jsp"/>
     <style>
         .error{color:red}
+
+                    body {
+                              background-color: #A5FFC9;
+
+                            }
+
     </style>
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.3.0/css/bootstrap.min.css">
 </head>
 <body class="container">
-<div class="table-responsive">
-<div class="table-responsive mx-auto">
+
+
+<div class="table-responsive-md mx-auto">
 
     <form:form method="post" action="addt" modelAttribute="addTr" cssClass="form-horizontal">
         <div class="form-row">
