@@ -1,4 +1,4 @@
-package com.spring.calculator.config;
+package com.spring.slalom.config;
 
 import org.springframework.security.access.AccessDeniedException;
 import org.springframework.security.web.access.AccessDeniedHandler;

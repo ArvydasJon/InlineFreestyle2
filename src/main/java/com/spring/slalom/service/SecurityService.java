@@ -1,4 +1,4 @@
-package com.spring.calculator.service;
+package com.spring.slalom.service;
 
 public interface SecurityService {
     String findLoggedInUsername();

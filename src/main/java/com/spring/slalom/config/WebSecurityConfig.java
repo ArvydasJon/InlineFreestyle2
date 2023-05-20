@@ -1,4 +1,4 @@
-package com.spring.calculator.config;
+package com.spring.slalom.config;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;

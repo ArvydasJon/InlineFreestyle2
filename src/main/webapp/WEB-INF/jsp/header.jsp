@@ -14,17 +14,31 @@
 
 <nav class="navbar navbar-light" style="background-color: #A5FFC9;">
   <div class="container-fluid">
-    <div class="navbar-header">
-    </div>
-    <ul class="nav navbar-nav navbar-auto">
+    <ul class="nav navbar-nav justify-content-center">
       <li>
-        <span style="font-size: 2.2em; font-weight: bold; color: blue;">WE LOVE SLALOM</span>
+        <span class="text-center" style="font-size: 2.2em; font-weight: bold; color: blue;">WE LOVE SLALOM</span>
+      </li>
+ </ul>
+                <security:authorize access="hasAuthority('admin')">
+                    <ul class="nav navbar-nav navbar-left">
+                        <li class="active">
+                        <a style="color:blue;" href="/addTrick">Add new trick</a></li>
+                    </ul>
+                </security:authorize>
+
+                <ul class="nav navbar-nav navbar-right">
+                        <c:if test="${pageContext.request.userPrincipal.name != null}"> <!-- vartotojo vardo gavimas iš užklausos -->
+                            <form id="logoutForm" method="POST" action="${contextPath}/logout">
+                                <input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}"/>
+                            </form>
+                            <a onclick="document.forms['logoutForm'].submit()" style="color: blue;">Logout, ${pageContext.request.userPrincipal.name}</a>
+                        </c:if>
+                </ul>
+
                 <button type="button" class="btn btn-primary ml-3">
                   <a href="/" style="color: white;">Go to trick list</a>
                 </button>
-        <!--button type="button" class="btn btn-primary ml-3">
-          <a href="/addTrick" style="color: white;">Add new trick</a>
-        </button-->
+
       </li>
     </ul>
   </div>

@@ -1,4 +1,4 @@
-package com.spring.calculator.config;
+package com.spring.slalom.config;
 
 import javax.persistence.EntityManagerFactory;
 import javax.persistence.Persistence;

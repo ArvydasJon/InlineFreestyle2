@@ -21,5 +21,7 @@
                     <a onclick="document.forms['logoutForm'].submit()" style="color: blue;">Logout, ${pageContext.request.userPrincipal.name}</a>
                 </c:if>
         </ul>
+
+
     </div>
 </nav>

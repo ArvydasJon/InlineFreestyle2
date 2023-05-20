@@ -1,7 +1,7 @@
-package com.spring.calculator.validator;
+package com.spring.slalom.validator;
 
-import com.spring.calculator.model.User;
-import com.spring.calculator.service.UserService;
+import com.spring.slalom.model.User;
+import com.spring.slalom.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 import org.springframework.validation.Errors;

@@ -1,6 +1,6 @@
-package com.spring.calculator.config;
+package com.spring.slalom.config;
 
-import com.spring.calculator.CalculatorApplication;
+import com.spring.slalom.SlalomApplication;
 import org.springframework.boot.builder.SpringApplicationBuilder;
 import org.springframework.boot.web.servlet.support.SpringBootServletInitializer;
 
@@ -9,7 +9,7 @@ public class ServletInitializer extends SpringBootServletInitializer {
 
     @Override
     protected SpringApplicationBuilder configure(SpringApplicationBuilder application) {
-        return application.sources(CalculatorApplication.class);
+        return application.sources(SlalomApplication.class);
     }
 
 }

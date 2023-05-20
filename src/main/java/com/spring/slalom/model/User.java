@@ -1,4 +1,4 @@
-package com.spring.calculator.model;
+package com.spring.slalom.model;
 
 import javax.persistence.*;
 

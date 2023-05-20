@@ -1,6 +1,6 @@
-package com.spring.calculator.model;
+package com.spring.slalom.model;
 
-import com.spring.calculator.config.JPAUtil;
+import com.spring.slalom.config.JPAUtil;
 
 import javax.persistence.EntityManager;
 import javax.persistence.EntityTransaction;

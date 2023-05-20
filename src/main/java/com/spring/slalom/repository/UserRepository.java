@@ -1,6 +1,6 @@
-package com.spring.calculator.repository;
+package com.spring.slalom.repository;
 
-import com.spring.calculator.model.User;
+import com.spring.slalom.model.User;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 

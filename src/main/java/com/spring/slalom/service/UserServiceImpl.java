@@ -1,7 +1,7 @@
-package com.spring.calculator.service;
+package com.spring.slalom.service;
 
-import com.spring.calculator.model.User;
-import com.spring.calculator.repository.UserRepository;
+import com.spring.slalom.model.User;
+import com.spring.slalom.repository.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Service;

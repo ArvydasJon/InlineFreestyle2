@@ -6,8 +6,9 @@
 <html>
     <head>
         <title>LIST OF ALL TRICKSss</title>
-        <jsp:include page="menu.jsp"/>
         <jsp:include page="header.jsp"/>
+        <!--jsp:include page="menu.jsp"/-->
+
 
         <style>
         .frozen-header {
@@ -20,7 +21,7 @@
         }
 
                 body {
-                  background-color: green;
+                  background-color: #00b300;
                 }
 
                 th {

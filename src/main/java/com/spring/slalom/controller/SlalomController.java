@@ -1,10 +1,10 @@
-package com.spring.calculator.controller;
+package com.spring.slalom.controller;
 
-import com.spring.calculator.model.*;
+import com.spring.slalom.model.*;
 
-import com.spring.calculator.service.SecurityService;
-import com.spring.calculator.service.UserService;
-import com.spring.calculator.validator.UserValidator;
+import com.spring.slalom.service.SecurityService;
+import com.spring.slalom.service.UserService;
+import com.spring.slalom.validator.UserValidator;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
@@ -19,7 +19,7 @@ import java.util.HashMap;
 
 @Controller
 @EnableAutoConfiguration
-public class CalculatorController {
+public class SlalomController {
     @Autowired
     private UserService userService;
 

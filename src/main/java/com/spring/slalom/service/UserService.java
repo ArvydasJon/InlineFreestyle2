@@ -1,6 +1,6 @@
-package com.spring.calculator.service;
+package com.spring.slalom.service;
 
-import com.spring.calculator.model.User;
+import com.spring.slalom.model.User;
 
 public interface UserService {
     void save(User user);
