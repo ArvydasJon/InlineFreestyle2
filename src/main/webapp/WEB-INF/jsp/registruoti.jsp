@@ -10,6 +10,11 @@
       <meta charset="utf-8">
       <title>Registracija</title>
       <jsp:include page="header.jsp"/>
+
+          <style>
+              .errorsStyle{color:red}
+          </style>
+
   </head>
 
   <body>
@@ -22,14 +27,14 @@
                 <div class="form-group ${status.error ? 'has-error' : ''}">
                     <form:input type="text" path="username" class="form-control" placeholder="Name"
                                 autofocus="true"></form:input>
-                    <form:errors path="username"></form:errors>
+                    <form:errors path="username" class="errorsStyle"></form:errors>
                 </div>
             </spring:bind>
 
             <spring:bind path="password">
                 <div class="form-group ${status.error ? 'has-error' : ''}">
                     <form:input type="password" path="password" class="form-control" placeholder="Password"></form:input>
-                    <form:errors path="password"></form:errors>
+                    <form:errors path="password" class="errorsStyle" ></form:errors>
                 </div>
             </spring:bind>
 
@@ -37,7 +42,7 @@
                 <div class="form-group ${status.error ? 'has-error' : ''}">
                     <form:input type="password" path="passwordConfirm" class="form-control"
                                 placeholder="Confirm password"></form:input>
-                    <form:errors path="passwordConfirm"></form:errors>
+                    <form:errors path="passwordConfirm" class="errorsStyle" ></form:errors>
                 </div>
             </spring:bind>
 

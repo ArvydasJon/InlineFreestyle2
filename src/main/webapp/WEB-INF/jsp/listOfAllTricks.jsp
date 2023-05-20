@@ -110,7 +110,7 @@
                         <!-- atvaizduoti atnaujinimo adresą -->
                   <a href="${atnaujinti}">Atnaujinti</a>
                         | <a href="${trinti}"
-                             onclick="if (!(confirm('Ar tikrai norite ištrinti šį įrašą?'))) return false">Trinti</a>
+                             onclick="if (!(confirm('Are you sure you want to delete this record? '))) return false">Trinti</a>
                         | <!-- atvaizduoti rodymo adresą -->
                   <a href="${rodyti}">Rodyti</a>
                     </td>

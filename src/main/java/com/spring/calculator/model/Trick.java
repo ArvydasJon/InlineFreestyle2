@@ -14,6 +14,7 @@ public class Trick {
 
     @Column(name = "trick_name")
     @NotEmpty(message = "Field cannot be empty")
+    //@Size(min = 5,message = "Must be at least 5 characters")
     private String trick_name;
 
     @Column(name = "trick_type")
