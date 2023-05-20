@@ -21,7 +21,7 @@
         }
 
                 body {
-                  background-color: #00b300;
+                  background-color: #4dff4d;
                 }
 
                 th {

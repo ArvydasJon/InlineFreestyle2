@@ -1,4 +1,10 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%@ taglib prefix="spring" uri="http://www.springframework.org/tags" %>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@ taglib prefix="security" uri="http://www.springframework.org/security/tags" %>
+<!-- puslapio turinio keliui nustatyti -->
+<c:set var="contextPath" value="${pageContext.request.contextPath}"/>
+
 
 <!-- compiled and minified CSS -->
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css">
@@ -19,14 +25,18 @@
         <span class="text-center" style="font-size: 2.2em; font-weight: bold; color: blue;">WE LOVE SLALOM</span>
       </li>
  </ul>
+ </div>
+
+<div class="container-fluid">
                 <security:authorize access="hasAuthority('admin')">
                     <ul class="nav navbar-nav navbar-left">
                         <li class="active">
                         <a style="color:blue;" href="/addTrick">Add new trick</a></li>
                     </ul>
                 </security:authorize>
+ </div>
 
-                <ul class="nav navbar-nav navbar-right">
+                <ul class="nav navbar-nav navbar-left">
                         <c:if test="${pageContext.request.userPrincipal.name != null}"> <!-- vartotojo vardo gavimas iš užklausos -->
                             <form id="logoutForm" method="POST" action="${contextPath}/logout">
                                 <input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}"/>
