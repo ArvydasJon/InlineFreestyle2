@@ -34,20 +34,36 @@ public class SlalomController {
     @Qualifier("TrickDAO")
     public TrickDAO trickDAO;
 
-
+    /**
+     *
+     * @param model pasiima duomenys iš db įdeda į Model
+     * @return užkrauną tinklapį su visais triukais
+     */
     @GetMapping("/")
     public String homePage(Model model) {
         model.addAttribute("tricks2", trickDAO.findEntities());
         return "listOfAllTricks";
     }
 
+    /**
+     *
+     * @param model paima tuščius duomenys
+     * @return užkrauną tuščią pridėjimo blanką
+     */
     @GetMapping("/addTrick")
     public String addTrickBlank(Model model) {
         model.addAttribute("addTr", new Trick());
         return "addTrick";
     }
 
-
+    /**
+     *
+     * @param trick triuko duomenys, kurie validuojami
+     * @param bindingResult
+     * @param inputForm forma turinti laukelius vartotojui įvesti duomenys
+     * @param model paima įvestus duomenys
+     * @return užkrauna tinklapį su visais triukais
+     */
     @PostMapping("/addt")
     public String addTrick(@Valid @ModelAttribute("addTr") Trick trick, BindingResult bindingResult,
                            @RequestParam HashMap<String, String> inputForm, Model model) {
@@ -67,6 +83,13 @@ public class SlalomController {
             return "listOfAllTricks";
         }
     }
+
+    /**
+     *
+     * @param id įrašo unikalus id, pagal kuri nustatoma kokį įrašą ištrinti
+     * @param model  paimami visi triukų įrašai
+     * @return užkrauna tinklapį su visais triukais
+     */
     @RequestMapping(method = RequestMethod.GET, value = "/delete{id}")
     public String deleteById ( @RequestParam("id") int id, Model model){
         trickDAO.removeEntityById(id);
@@ -74,17 +97,37 @@ public class SlalomController {
         return "listOfAllTricks";
     }
 
+
+    /**
+     *
+     * @param id įrašo unikalus id, pagal kuri nustatoma kokį įrašą pateikti
+     * @param model  paimami vieno įrašo duomenys
+     * @return užkraunamas tinklapis su vieno triuko info
+     */
     @RequestMapping(method = RequestMethod.GET, value = "/show{id}")
     public String getById ( @RequestParam("id") int id, Model model){
         model.addAttribute("trick3", trickDAO.findEntityById(id));
         return "trick";
     }
+
+    /**
+     *
+     * @param id įrašo unikalus id, pagal kuri nustatoma kokį įrašą norima atnaujinti
+     * @param model paimami įrašo duomenys
+     * @return užkrauna tinklapį su įrašu, kuri norima redaguoti
+     */
     @RequestMapping(method = RequestMethod.GET, value = "/update{id}")
     public String updateById ( @RequestParam("id") int id, Model model){
         model.addAttribute("trick4", trickDAO.findEntityById(id));
         return "update";
     }
 
+
+    /**
+     *
+     * @param trick vieno triuko duomenys
+     * @return užkrauna tinklapį su atnaujintą įrašo informacija
+     */
     @RequestMapping(method = RequestMethod.POST, value = "/updateTrick")
     public String updateTrick (@ModelAttribute("trick4") Trick trick){
         trickDAO.updateEntity(trick);
@@ -92,7 +135,11 @@ public class SlalomController {
     }
 
 
-
+    /**
+     *
+     * @param model tuščias blankas
+     * @return užkraunamas tuščiasregistravimo blankas
+     */
     @GetMapping("/registruoti")
     public String registration(Model model) {
         model.addAttribute("userForm", new User());
@@ -100,6 +147,13 @@ public class SlalomController {
         return "registruoti";
     }
 
+
+    /**
+     *
+     * @param userForm vartotojo įvesti duomenys
+     * @param bindingResult
+     * @return jei praėjo validacija užkrunamas namu tinklapis
+     */
     @PostMapping("/registruoti")
     public String registration(@ModelAttribute("userForm") User userForm, BindingResult bindingResult) {
         userValidator.validate(userForm, bindingResult);
@@ -114,6 +168,7 @@ public class SlalomController {
 
         return "redirect:/";
     }
+
 
     @GetMapping("/prisijungti")
     public String login(Model model, String error, String logout) {

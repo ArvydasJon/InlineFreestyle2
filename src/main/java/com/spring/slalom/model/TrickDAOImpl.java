@@ -6,7 +6,13 @@ import javax.persistence.EntityManager;
 import javax.persistence.EntityTransaction;
 import java.util.List;
 
+
 public class TrickDAOImpl implements TrickDAO {
+
+    /** Išsaugo įrašą db
+     *
+     * @param trick
+     */
     @Override
     public void insertEntity(Trick trick) {
         EntityManager entityManager = JPAUtil.getEntityManagerFactory().createEntityManager();
@@ -17,6 +23,10 @@ public class TrickDAOImpl implements TrickDAO {
         entityManager.close();
     }
 
+    /** paima visus įrašus iš db
+     *
+     * @return
+     */
     @Override
     public List<Trick> findEntities() {
         EntityManager entityManager = JPAUtil.getEntityManagerFactory().createEntityManager();
@@ -34,6 +44,11 @@ public class TrickDAOImpl implements TrickDAO {
         return tricks;
     }
 
+    /** Ištriną įrašą iš db
+     *
+     * @param id
+     */
+
     @Override
     public void removeEntityById(int id) {
         EntityManager entityManager= JPAUtil.getEntityManagerFactory().createEntityManager();
@@ -47,6 +62,11 @@ public class TrickDAOImpl implements TrickDAO {
         entityManager.close();
     }
 
+    /** suranda db įrašą su tam tikru id
+     *
+     * @param id
+     * @return
+     */
     @Override
     public Trick findEntityById(int id) {
         EntityManager entityManager = JPAUtil.getEntityManagerFactory().createEntityManager();
@@ -65,6 +85,10 @@ public class TrickDAOImpl implements TrickDAO {
         return tricks.get(0);
     }
 
+    /** Pakeičia norimą įrašą
+     *
+     * @param trick
+     */
     @Override
     public void updateEntity(Trick trick) {
         EntityManager entityManager= JPAUtil.getEntityManagerFactory().createEntityManager();
